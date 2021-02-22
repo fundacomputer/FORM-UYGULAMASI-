@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GİRİŞ YAP & ÜYELİK FORMU</title>
+     <link rel="stylesheet" href="proje.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" />
+    
+     
+</head>
+<body>
+    <div class="form">
+      
+        <ul class="tab-group">
+          <li onClick="openClose('girisyap')"  class="tab active"><a href="#girisyap">Giriş Yap</a></li>
+          <li onClick="openClose('uyeol')" class="tab"><a href="#uyeol">Üye Ol</a></li>
+        </ul>
+        <br>
+     
+        
+        <div  id="girisyap">
+          <form name="form" id="uye_formu" action=" "  method="post" method="post">
+            
+            <input type="email" id="fname" name="fname" onblur="gmailKontrol()" placeholder="E-posta adresi">
+            <p id="sonuc" ></p> 
+           <input type="password" id="pwd" name="pwd"  onblur="sifreKontrol()" placeholder="Şifre">
+             <p id="sonuc1"></p> 
+             <button type="submit">Giriş Yap</button>
+             <p class="p1"><a href="#">Şifremi Unuttum</a></p>
+           
+          </form>
+         
+        </div>
+       
+       <div id="uyeol" style="display: none;" >
+          <p class="p2">E-posta adresiyle üye ol </p>  
+          <form action="#" method="post">
+           
+           <input type="text" id="firstname" name="firstname" placeholder="Ad"onkeyup="form_kontrol()"onblur="adKontrol()" />
+             
+           <input type="text" id="surname" name="surname" placeholder="Soyad"onkeyup="form_kontrol()"onblur="soyKontrol()"/>
+           
+           <input type="email" id="email" name="email" placeholder="E-posta  adresi "onkeyup="form_kontrol()"onblur="postaKontrol()"/>
+           <p id="sonuc3"></p>
+           <input type="password" id="pwd1" name="pwd"placeholder="Şifre" onkeyup="form_kontrol()" onblur="passwordKontrol()"/>
+           <p id="sonuc4"></p>
+           <input type="password" id="pwd2" name="pwd"placeholder="Şifre Onayı"onkeyup="form_kontrol()"onblur="pwKontrol()"/>
+           <p id="sonuc5"></p>
+               <br>
+               <input type="checkbox" id="onay" name="onay" value="onay" onchange="form_kontrol()">  
+               <label> Önemli kampanyalardan haberdar olmak için
+                 <b>Rıza Metni</b> kapsamında elektronik ileti almak istiyorum. </label>
+               <br>
+               <br>
+            <input type="submit" id="gonder"class="button button-block"value="Üye ol" disabled></input>
+            
+            </form>
+  
+        </div>
+        
+        </div>
+
+
+        <script src="web.js"></script>
+</body>
+</html>
